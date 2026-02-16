@@ -7,10 +7,10 @@ LABEL description="LibreTV - 免费在线视频搜索与观看平台"
 ENV PORT=8080
 
 # 设置工作目录
-WORKDIR /tmp
+WORKDIR /app
 
 # 复制 package.json 和 package-lock.json（如果存在）
-COPY package*.json .
+COPY package*.json ./
 
 # 安装依赖
 RUN npm ci --only=production && npm cache clean --force
