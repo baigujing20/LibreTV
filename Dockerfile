@@ -10,7 +10,7 @@ ENV PORT=8080
 WORKDIR /tmp
 
 # 复制 package.json 和 package-lock.json（如果存在）
-COPY package*.json ./
+COPY package*.json .
 
 # 安装依赖
 RUN npm ci --only=production && npm cache clean --force
